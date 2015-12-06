@@ -1,0 +1,1 @@
+{ "data": { "knn1" : "Aarogya", "knn3" :["Aarogya","Vindhya B-A","football"], "knn5" :["Aarogya","Farm","Vindhya B-A","Vindhya Canteen","football"],"svm" : "Vindhya C6"} }

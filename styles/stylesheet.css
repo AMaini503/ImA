@@ -1,0 +1,120 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.header {
+	border-bottom: 3px solid #ddd;
+	box-shadow: 0 2px 10px #ddd;
+	-moz-box-shadow: 0 2px 10px #ddd;
+	-webkit-box-shadow: 0 2px 10px #ddd;
+	padding: 0px 10px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	line-height: 102px;
+}
+.header .logo {
+	width: 120px;
+	height: 100px;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.header .heading {	
+	font-size: 30px;
+	font-weight: 600;
+	color: #aaa;
+	display: block;
+}
+.container {		
+	width: 90%;
+	padding: 30px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	box-shadow: 0  0 5px 0 #ddd;
+	-moz-box-shadow: 0 0 5px 0 #ddd;
+	-webkit-box-shadow: 0 0 5px 0 #ddd;
+	background: #eee;
+	margin: 0 auto;
+}
+.container #upload-form {
+	width: 256px;
+	margin: 0 auto;
+	display: block;
+	margin-top: 60px;
+	text-align: center;
+}
+.container #upload-form span {
+	display: block;
+	padding: 20px 0px;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+@media all and (max-width: 856px) {
+	.header .logo {
+		float: none;
+		position: static;
+	}
+	.header .heading {
+		font-size: 18px;
+	}
+	.container #upload-form span {
+		padding: 0px;
+	}
+}
+#fileUpload {
+	display: none;
+}
+.btn {
+	background: none;
+	border: none;
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px 10px 0px 0px;
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+}
+.btn:hover {
+	background: rgba(255,0,0,0.5);
+}
+.btn[name="browse"] {
+	display: inline;
+}
+.btn[name="submit"] {
+	margin-right: 0px;
+}
+
+#dummy-img {
+	width: 256px;
+	height: 256px;
+	margin: 0 auto;
+}
+#dummy-img img{
+	width: 256px;
+	height: 256px;
+	display: block;
+	margin: 0 auto;
+}
+.error {
+	margin: 20px auto;	
+	width: 50%;
+	min-width;
+	background: rgba(255,0,0,0.5);
+	padding: 20px;
+}
+.error span {
+	font-size: 20px;
+	font-weight: 600;
+}
+.error span:nth-child(2) {
+	cursor: pointer;
+	vertical-align: bottom;
+	float: right;
+}

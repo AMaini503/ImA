@@ -1,0 +1,20 @@
+<?php
+	session_start();
+	
+	/* construct parameters for matlab script */
+	$img = basename($_SESSION['FILE']['uploadedFile']['name']);
+	$descp = $_SESSION['DATA']['descriptor'];
+	$wordsize = $_SESSION['DATA']['word_size'];
+	$params = $img . ", " . $descp . ", " . $wordsize;
+	echo $params;
+	/*******************************************/
+
+	$chdir = 'cd ../codebase/;';
+	$cmd = "echo \"classify_image('abc', 'def')\" | matlab -nodisplay -nojvm -nodesktop | awk -F\"[ =]\" '{print $NF}'";
+	$cmd = $chdir . $cmd;
+	%$output = shell_exec($cmd);
+
+	//assuming a dictionary object is written into the results.txt file in the same folder as Matlab script : codebase/
+
+
+?>
